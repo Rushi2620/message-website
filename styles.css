@@ -1,0 +1,80 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #3d6ae8, #dee1e3);
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-container {
+    text-align:left;
+    max-width: 900px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #2b2222;
+}
+
+.scroll-container {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 20px 0; /* optional: add vertical padding */
+}
+
+.scrolling-content {
+    display: flex;
+    gap: 40px; /* controls space between cards */
+    animation: scroll 7s linear infinite; /* increase speed by reducing duration */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.service-card {
+    min-width: 200px;
+    height: 200px;
+    background-color: #62e36d;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    flex-shrink: 0; /* Prevent cards from shrinking */
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+
+
+.service-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 0;
+}
